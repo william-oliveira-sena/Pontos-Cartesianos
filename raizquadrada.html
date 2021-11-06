@@ -1,0 +1,18 @@
+<script>
+    var numero = prompt("Digite o Valor que deseja saber a raiz quadrada:");
+
+
+ //var numero2 = parseInt(numero);
+ var total =  Math.sqrt(numero);
+
+ var decimal = total.indexOf(".");
+//procura a posição do "." na string numero. Se ele existir, retornará um valor igual ou maior que zero. Se não, retornará "-1"
+
+if (decimal !== -1) {
+//se o valor retornado for diferente de -1 quer dizer que ele é maior ou igual à zero, o que implica que seja um número decimal
+
+    var dec = total.toFixed(2);
+        //já que o número é decimal, limita as casas após a virgula em, no máximo, 3
+}
+alert("A raiz quadrada de " + numero + " é: " + dec);   
+</script>
