@@ -1,20 +1,26 @@
 <script>
-    var x1 = 10;
-    var y1= 7;
+  
+var posicao = {x:Math.floor(Math.random()*10), y:Math.floor(Math.random()*10)};
 
-
-var x2;
-var y2;
+var posicao_entrada = {x:1,y:1}; //utilizando variavel objeto.
 
 var distancia = 100;
-    while(distancia > 1){
-x2 = prompt("entre com o valor de x");
-y2= prompt("entre com o valor de y");
-distancia = Math.sqrt(x2 - x1) * (x2 - x1) + (y2 - y1)* (y2 - y1);;                                                                                                      
-        alert("A distância ficou em " + distancia);
-    }
+var contador = 1;
+    while((distancia > 1) && (contador < 10)){
+posicao_entrada.x = prompt("entre com o valor de x");
+posicao_entrada.y = prompt("entre com o valor de y");
+distancia = Math.sqrt(posicao_entrada.x - posicao.x) * (posicao_entrada.x - posicao.x) + (posicao_entrada.y - posicao.y)* (posicao_entrada.y - posicao.y);
 
-alert("Você chegou no alvo");
+alert("Esta é a tentativa" + contador);                                             
+        alert("A distância ficou em " + distancia);
+        contador++;
+    }
+if (distancia <= 1){
+    alert("Você chegou no alvo");
+}else{
+    alert("Você não chegou no alvo");
+}
+
 
     
 </script>
